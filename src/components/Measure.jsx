@@ -6,10 +6,6 @@ export const Measure = () => {
   const [stepsGap, setStepsGap] = React.useState(7);
   return (
     <>
-      {/* <Typography.Title level={5}>Custom count:</Typography.Title>
-      <Slider min={2} max={10} value={stepsCount} onChange={setStepsCount} />
-      <Typography.Title level={5}>Custom gap:</Typography.Title>
-      <Slider step={4} min={0} max={40} value={stepsGap} onChange={setStepsGap} /> */}
       <Flex
         wrap
         gap="middle"
@@ -27,16 +23,6 @@ export const Measure = () => {
           trailColor="rgba(0, 0, 0, 0.06)"
           strokeWidth={20}
         />
-        {/* <Progress
-          type="circle"
-          percent={100}
-          steps={{
-            count: stepsCount,
-            gap: stepsGap,
-          }}
-          trailColor="rgba(0, 0, 0, 0.06)"
-          strokeWidth={20}
-        /> */}
       </Flex>
     </>
   );
