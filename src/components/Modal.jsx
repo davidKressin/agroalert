@@ -1,7 +1,7 @@
 import React from 'react';
 import {Measure} from "./Measure";
 
-export const Modal = ({ showModal, toggleModal }) => {
+export const Modal = ({ showModal, toggleModal, data }) => {
     return (
         <>
             {showModal && (
@@ -13,7 +13,7 @@ export const Modal = ({ showModal, toggleModal }) => {
                                 <button type="button" className="btn-close" aria-label="Close" onClick={toggleModal}></button>
                             </div>
                             <div className="modal-body">
-                                <Measure/>
+                                <Measure data={data}/>
                                 <h5 className='text-center'>Su zona se encuentra con humedad óptima.</h5>
                             </div>
                             

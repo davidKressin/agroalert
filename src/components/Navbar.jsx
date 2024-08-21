@@ -25,7 +25,8 @@ export const Navbar = () => {
                 id="/navbarNav">
                     {/* <ul className="navbar-nav"> */}
                         {/* <li className="nav-item"> */}
-                            <NavLink className="/nav-link btn btn-light " aria-current="page" to="home">Home</NavLink>
+                            <NavLink className="/nav-link btn btn-light " aria-current="page" to="home">Inicio</NavLink>
+                            <NavLink className="/nav-link btn btn-light " aria-current="page" to="record">Registro</NavLink>
                         {/* </li> */}
                         {/* <li className="nav-item"> */}
                             <NavLink className="/nav-link btn btn-light" to="login">Ingresar</NavLink>
