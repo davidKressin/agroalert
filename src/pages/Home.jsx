@@ -7,6 +7,7 @@ export const Home = () => {
   const [showAlert, setShowAlert] = useState(true);
   const [modalData, setModalData] = useState({});
   const [activeModal, setActiveModal] = useState(false);
+  const [firebaseData, setFirebaseData] = useState({});
 
   useEffect(() => {
     // Referencia a los datos en la base de datos para modalData
@@ -15,18 +16,15 @@ export const Home = () => {
     // Lee datos específicos para modalData
     const unsubscribe = onValue(modalDataRef, (snapshot) => {
       const percentage = snapshot.val();
-      setModalData({ porcentaje: percentage });
+      setFirebaseData({ porcentaje: percentage });
     });
 
     // Limpia la suscripción cuando el componente se desmonte
     return () => unsubscribe();
   }, []);
 
-  const handleAlertClose = () => {
-    setShowAlert(false);
-  };
-
-  const handleClick = () => {
+  const handleClick = (data) => {
+    setModalData(data);
     setActiveModal(prevState => !prevState);
   };
 
@@ -59,13 +57,13 @@ export const Home = () => {
       <div className="row col-12 m-0">
         <div className="container mt-5">
           <div className="row text-center justify-content-between">
-            <div onClick={handleClick} className="col-md-3 col-6">
-              <div className={`bg-${(modalData.porcentaje < 70 && modalData.porcentaje > 60) ? "success" : (modalData.porcentaje > 70) ? "primary": "danger"} text-white p-3 mb-3 card`}>Zona 1</div>
+            <div onClick={()=>handleClick(firebaseData)} className="col-md-3 col-6">
+              <div className={`bg-${(firebaseData.porcentaje < 70 && firebaseData.porcentaje > 60) ? "success" : (firebaseData.porcentaje > 70) ? "primary": "danger"} text-white p-3 mb-3 card`}>Zona 1</div>
             </div>
-            <div onClick={handleClick} className="col-md-3 col-6 rounded">
+            <div onClick={()=>handleClick({porcentaje:"40"})} className="col-md-3 col-6 rounded">
               <div className="bg-danger text-white p-3 mb-3 card">Zona 2</div>
             </div>
-            <div onClick={handleClick} className="col-md-3 col-6">
+            <div onClick={()=>handleClick({porcentaje: "65"})} className="col-md-3 col-6">
               <div className="bg-success text-white p-3 mb-3 card">Zona 3</div>
             </div>
           </div>
