@@ -54,7 +54,7 @@ export const Record = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className='text-white text-center'>Cargando información de los sensores...</div>;
   }
 
   return (
