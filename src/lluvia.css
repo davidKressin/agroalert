@@ -1,0 +1,51 @@
+
+.drop-icon {
+    position: relative;
+    overflow: hidden;
+}
+
+.raindrop {
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    bottom: 100%;
+    animation: fall 0.8s infinite linear;
+}
+
+.raindrop:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.raindrop:nth-child(2) {
+    left: 15%;
+    animation-delay: 0.2s;
+}
+
+.raindrop:nth-child(3) {
+    right: 10%;
+    animation-delay: 0.4s;
+}
+
+.raindrop:nth-child(4) {
+    right: 15%;
+    animation-delay: 0.6s;
+}
+
+.raindrop:nth-child(5) {
+    left: 10%;
+    animation-delay: 0.8s;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(120px);
+        opacity: 0;
+    }
+}
