@@ -35,7 +35,7 @@ export const Record = () => {
           formattedData.push({
             date: formattedDate,
             sensor: sensor.replace('sensor', 'Sensor '),
-            humidity: `${readings.porcentaje}%`,
+            humidity: readings.porcentaje,
             timestamp: Number(dateTimestamp) // Añadimos el timestamp para ordenar
           });
         }
@@ -78,10 +78,10 @@ export const Record = () => {
             </tr>
           ) : (
             data.map((row, index) => (
-              <tr key={index}>
+              <tr className={`bg-${(row.humidity < 60) && "soft-danger"} `} key={index}>
                 <td>{row.date}</td>
                 <td>{row.sensor}</td>
-                <td>{row.humidity}</td>
+                <td>{row.humidity}%</td>
               </tr>
             ))
           )}

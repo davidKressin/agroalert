@@ -3,7 +3,7 @@
     --color2: #4a6eb0;
     --color3: #0799b6;
     --color4: #9cd2d3;
-    --color5: #f2e6cf;
+    --color5: #ff48484f;
 }
 
 html, body{
@@ -27,7 +27,9 @@ html, body{
 .bg-color5{
     background-color: var(--color5);
 }
-
+.bg-soft-danger{
+    background-color: var(--color5);
+}
 .color1{
     color: var(--color1);
 }
