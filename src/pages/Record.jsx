@@ -26,6 +26,8 @@ export const Record = () => {
       const dataObj = snapshot.val();
       const formattedData = [];
 
+      console.log(dataObj);
+
       // Procesar datos
       for (const [dateTimestamp, sensors] of Object.entries(dataObj)) {
         const formattedDate = formatDate(Number(dateTimestamp));
@@ -45,6 +47,7 @@ export const Record = () => {
       // Eliminar el campo timestamp antes de guardar el estado
       const finalData = formattedData.map(({ timestamp, ...rest }) => rest);
 
+      console.log("finalData:", finalData);
       setData(finalData);
       setLoading(false);
     });
@@ -52,6 +55,7 @@ export const Record = () => {
     // Limpia la suscripción cuando el componente se desmonte
     return () => unsubscribe();
   }, []);
+
 
   if (loading) {
     return <div className='container-fluid min-vh-100 text-white text-center'>Cargando información de los sensores...</div>;
