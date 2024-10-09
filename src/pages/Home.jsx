@@ -70,11 +70,11 @@ export const Home = () => {
             </div>
           </div>
 
-          <div className="row text-center justify-content-between">
-            <div onClick={() => handleClick(firebaseData.sensor_1)} className="col-md-3 col-6">
+          <div className="row text-center justify-content-center">
+            {/* <div onClick={() => handleClick(firebaseData.sensor_1)} className="col-md-3 col-6">
               {
                 !!firebaseData
-                  ? <div className={`bg-${(firebaseData.sensor_1.porcentaje < 70 && firebaseData.sensor_1.porcentaje > 60) ? "success" : (firebaseData.sensor_1.porcentaje > 70) ? "primary" : "danger"} text-white p-3 mb-3 card`}>PAMELA SALAZAR<br /> {firebaseData.sensor_1.porcentaje}%</div>
+                  ? <div className={`bg-${(firebaseData.sensor_1.porcentaje < 70 && firebaseData.sensor_1.porcentaje > 60) ? "success" : (firebaseData.sensor_1.porcentaje > 70) ? "primary" : "danger"} text-white p-3 mb-3 card`}>Zona 1<br /> {firebaseData.sensor_1.porcentaje}%</div>
                   : <div className={`bg-danger text-white p-3 mb-3 card`}>Zona 1</div>
               }
 
@@ -82,32 +82,32 @@ export const Home = () => {
             <div onClick={() => handleClick(firebaseData.sensor_2)} className="col-md-3 col-6 rounded">
               {
                 !!firebaseData
-                  ? <div className={`bg-${(firebaseData.sensor_2.porcentaje < 70 && firebaseData.sensor_2.porcentaje > 60) ? "success" : (firebaseData.sensor_2.porcentaje > 70) ? "primary" : "danger"} text-white p-3 mb-3 card`}>FRANCISCA SALGADO <br />{firebaseData.sensor_2.porcentaje}%</div>
+                  ? <div className={`bg-${(firebaseData.sensor_2.porcentaje < 70 && firebaseData.sensor_2.porcentaje > 60) ? "success" : (firebaseData.sensor_2.porcentaje > 70) ? "primary" : "danger"} text-white p-3 mb-3 card`}>Zona 2<br />{firebaseData.sensor_2.porcentaje}%</div>
                   : <div className={`bg-danger text-white p-3 mb-3 card`}>Zona 2</div>
               }
 
-            </div>
+            </div> */}
             <div onClick={() => handleClick(firebaseData.sensor_3)} className="col-md-3 col-6">
               {
                 !!firebaseData
-                  ? <div className={`bg-${(firebaseData.sensor_3.porcentaje < 70 && firebaseData.sensor_3.porcentaje > 60) ? "success" : (firebaseData.sensor_3.porcentaje > 70) ? "primary" : "danger"} text-white p-3 mb-3 card`}>EDUARDO FUENTES <br />{firebaseData.sensor_3.porcentaje}%</div>
-                  : <div className={`bg-danger text-white p-3 mb-3 card`}>Zona 3</div>
+                  ? <div className={`bg-${(firebaseData.sensor_3.porcentaje < 70 && firebaseData.sensor_3.porcentaje > 60) ? "success" : (firebaseData.sensor_3.porcentaje > 70) ? "primary" : "danger"} text-white p-3 mb-3 card`}>Humedad Zona<br />{firebaseData.sensor_3.porcentaje}%</div>
+                  : <div className={`bg-danger text-white p-3 mb-3 card`}>Accediendo a la información...</div>
               }
             </div>
-            <div onClick={() => handleClick(firebaseData.sensor_4)} className="col-md-3 col-6">
+            {/* <div onClick={() => handleClick(firebaseData.sensor_4)} className="col-md-3 col-6">
               {
                 !!firebaseData
-                  ? <div className={`bg-${(firebaseData.sensor_4.porcentaje < 70 && firebaseData.sensor_4.porcentaje > 60) ? "success" : (firebaseData.sensor_4.porcentaje > 70) ? "primary" : "danger"} text-white p-3 mb-3 card`}>DANIELA CARTES <br />{firebaseData.sensor_4.porcentaje}%</div>
+                  ? <div className={`bg-${(firebaseData.sensor_4.porcentaje < 70 && firebaseData.sensor_4.porcentaje > 60) ? "success" : (firebaseData.sensor_4.porcentaje > 70) ? "primary" : "danger"} text-white p-3 mb-3 card`}>Zona 4<br />{firebaseData.sensor_4.porcentaje}%</div>
                   : <div className={`bg-danger text-white p-3 mb-3 card`}>Zona 4</div>
               }
             </div>
             <div onClick={() => handleClick(firebaseData.sensor_5)} className="col-md-3 col-6">
               {
                 !!firebaseData
-                  ? <div className={`bg-${(firebaseData.sensor_5.porcentaje < 70 && firebaseData.sensor_5.porcentaje > 60) ? "success" : (firebaseData.sensor_5.porcentaje > 70) ? "primary" : "danger"} text-white p-3 mb-3 card`}>RODRIGO CAPARROS<br />{firebaseData.sensor_5.porcentaje}%</div>
+                  ? <div className={`bg-${(firebaseData.sensor_5.porcentaje < 70 && firebaseData.sensor_5.porcentaje > 60) ? "success" : (firebaseData.sensor_5.porcentaje > 70) ? "primary" : "danger"} text-white p-3 mb-3 card`}>Zona 5<br />{firebaseData.sensor_5.porcentaje}%</div>
                   : <div className={`bg-danger text-white p-3 mb-3 card`}>Zona 5</div>
               }
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
