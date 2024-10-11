@@ -87,10 +87,10 @@ export const Home = () => {
               }
 
             </div> */}
-            <div onClick={() => handleClick(firebaseData.sensor_3)} className="col-md-3 col-6">
+            <div onClick={() => handleClick(firebaseData.sensor_4)} className="col-md-3 col-6">
               {
                 !!firebaseData
-                  ? <div className={`bg-${(firebaseData.sensor_3.porcentaje < 70 && firebaseData.sensor_3.porcentaje > 60) ? "success" : (firebaseData.sensor_3.porcentaje > 70) ? "primary" : "danger"} text-white p-3 mb-3 card`}>Humedad Zona<br />{firebaseData.sensor_3.porcentaje}%</div>
+                  ? <div className={`bg-${(firebaseData.sensor_4.porcentaje < 70 && firebaseData.sensor_4.porcentaje > 60) ? "success" : (firebaseData.sensor_4.porcentaje > 70) ? "primary" : "danger"} text-white p-3 mb-3 card`}>Humedad Zona<br />{firebaseData.sensor_4.porcentaje}%</div>
                   : <div className={`bg-danger text-white p-3 mb-3 card`}>Accediendo a la información...</div>
               }
             </div>
